@@ -605,8 +605,10 @@ h3 {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
+  max-width: 1040px;
+  margin-inline: auto;
 }
 
 .project-card {
@@ -627,14 +629,12 @@ h3 {
 }
 
 .project-card-featured {
-  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   min-height: 320px;
 }
 
-.project-image-wrap,
-.placeholder-visual {
+.project-image-wrap {
   position: relative;
   min-height: 245px;
   overflow: hidden;
@@ -789,53 +789,6 @@ h3 {
   color: #a1d1ff;
   text-decoration: underline;
   text-underline-offset: 4px;
-}
-
-.text-link-muted {
-  color: #8494aa;
-  font-size: 10px;
-}
-
-.placeholder-visual {
-  display: grid;
-  min-height: 178px;
-  place-items: center;
-  background:
-    linear-gradient(rgba(75, 155, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(75, 155, 255, 0.045) 1px, transparent 1px),
-    radial-gradient(ellipse at 50% 50%, rgba(41, 106, 183, 0.22), transparent 60%),
-    #101b2b;
-  background-size: 25px 25px, 25px 25px, auto, auto;
-}
-
-.placeholder-visual-api {
-  background:
-    radial-gradient(ellipse at 50% 50%, rgba(41, 106, 183, 0.2), transparent 60%),
-    linear-gradient(145deg, #112035, #0d1727);
-}
-
-.placeholder-bracket {
-  color: rgba(105, 177, 255, 0.7);
-  font-family: var(--font-heading);
-  font-size: 44px;
-  font-weight: 700;
-  letter-spacing: -0.08em;
-}
-
-.placeholder-visual-api .placeholder-bracket {
-  font-size: 31px;
-  letter-spacing: 0.06em;
-}
-
-.placeholder-lines {
-  position: absolute;
-  bottom: 29px;
-  left: 50%;
-  width: 86px;
-  height: 2px;
-  background: rgba(105, 177, 255, 0.35);
-  box-shadow: 0 7px 0 rgba(105, 177, 255, 0.17), 0 -7px 0 rgba(105, 177, 255, 0.17);
-  transform: translateX(-50%);
 }
 
 .resume-section {
@@ -996,13 +949,11 @@ h3 {
 }
 
 @media (min-width: 761px) {
-  .skills-grid .skill-card:nth-child(2),
-  .projects-grid .project-card:nth-child(2) {
+  .skills-grid .skill-card:nth-child(2) {
     transition-delay: 70ms;
   }
 
-  .skills-grid .skill-card:nth-child(3),
-  .projects-grid .project-card:nth-child(3) {
+  .skills-grid .skill-card:nth-child(3) {
     transition-delay: 140ms;
   }
 
@@ -1240,16 +1191,8 @@ h3 {
     min-height: 0;
   }
 
-  .project-card-featured {
-    grid-column: auto;
-  }
-
   .project-content {
     padding: 21px;
-  }
-
-  .placeholder-visual {
-    min-height: 160px;
   }
 
   .resume-panel {
