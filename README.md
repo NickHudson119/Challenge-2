@@ -25,12 +25,11 @@ assets/
   images/
 ```
 
-## Personalize before publishing
+## Final pre-deployment checks
 
-- Replace the clearly labeled About and project placeholders with finalized details.
-- Add a real resume PDF or professional profile link.
-- Add verified LinkedIn and GitHub profile URLs.
-- Confirm project descriptions and destinations before sharing them.
+- Confirm personal, contact, and resume details are intended for public access.
+- Verify the project description, report screenshot, and GitHub destination.
+- Test the site using the GitHub Pages project path `/Challenge-2/`.
 
 The existing headshot is used in the hero. The existing logo asset has a white
 background that does not suit the dark design, so the page uses a text-based monogram
